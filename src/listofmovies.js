@@ -24,15 +24,26 @@ class MovieList extends React.Component{
     render(){
         return (
             <ul>
-            {
-                this.state.movies.map(movie => <li onClick={this._handleClick}>{movie}</li>)
-            }
+                {
+                    this.state.movies.map((movie, index => (
+                        <li onClick={()=>{
+                            this._handleClick(index)
+                        }}>{movie}</li>
+                    )))
+                    }
             </ul>
-        );
-    }
-    _handleClick = (event) => {
-        console.log('They clicked!')
-        console.log(event.target)
+        )
+    };
+
+    _handleClick=(index) => {
+        const newMovies = [
+            ...this.state.movies
+        ];
+        newMovies[index] += '!';
+
+        this.setState({
+            movies: newMovies
+        });
     }
 }
 
