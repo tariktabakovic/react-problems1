@@ -8,10 +8,11 @@ import Favoritemovies from './Favoritemovies';
 function App() {
   return (
     <div>
-      <Mylist list= 'Eggs, cereal, milk'/>
-      <div>
-      <Favoritemovies movieslist= 'Goodfellas and Shutter Island'/>
-      </div>
+      {/* <Mylist list= 'Eggs, cereal, milk'/> */}
+      <h1>
+      <Favoritemovies/>
+      {/* <Favoritemovies movieslist= 'Goodfellas and Shutter Island'/> */}
+      </h1>
     </div>
   );
 }
